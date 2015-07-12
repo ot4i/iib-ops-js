@@ -141,7 +141,7 @@ Integration = (function(){
           callback(null,IntegrationBus.instance);        
       };
 
-      $.getJSON('/apiv1/integrationbus?depth=8',function(result){
+      $.getJSON('http://localhost:3002/apiv1/integrationbus?depth=8',function(result){
           IntegrationBus.instance=  new IntegrationBus(result);    
           callback(null,IntegrationBus.instance);
           
