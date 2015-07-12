@@ -78,9 +78,9 @@ describe('IntegrationNode', function(){
       integrationNode.on('messageFlowStats',function(stats){
           if(stats.WMQIStatisticsAccounting != undefined) {
             if(flowName==undefined){
-              flowName=stats.WMQIStatisticsAccounting.MessageFlowName;
+              flowName=stats.WMQIStatisticsAccounting.MessageFlow.MessageFlowName;
               
-            }else if (flowName===stats.WMQIStatisticsAccounting.MessageFlowName){
+            }else if (flowName===stats.WMQIStatisticsAccounting.MessageFlow.MessageFlowName){
               //2nd publish for this flow name
               done();              
             }              
