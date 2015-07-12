@@ -72,6 +72,18 @@ function APIv1Stub(){
     return stub;
 }
 
+var apiv1Stub;
+beforeEach(function(done){
+    apiv1Stub = APIv1Stub();
+    done();
+});
+
+afterEach(function(done){
+    apiv1Stub.restore();
+    done();
+});
+
+
 var Paho ={};
 Paho.MQTT = (function(){
     function client(){
