@@ -66,7 +66,7 @@ function APIv1Stub(){
         console.log(str);
     }
     var stub = sinon.fakeServer.create();
-    stub.respondWith("GET", "/apiv1/integrationbus?depth=8",integrationBus);    
+    stub.respondWith("GET", "http://localhost:3002/apiv1/integrationbus?depth=8",integrationBus);    
     stub.autoRespond=true;
     
     return stub;
