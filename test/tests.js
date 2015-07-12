@@ -2,6 +2,30 @@
 
 describe('IntegrationBus', function(){
     this.timeout(30000);
+
+    it('should return a singleton instance',function(done){
+        var instance=null;
+        function handleReturn(error,integrationBus){
+            integrationBus.should.not.be.null;
+
+            if(instance==null) {
+                instance=integrationBus;
+                Integration.getIntegrationBus(handleReturn);
+
+            }else{
+                var equal=false;
+                if(integrationBus===instance) {
+                    equal=true;
+                }
+                equal.should.be.true;
+                done();
+            }
+        }
+        Integration.getIntegrationBus(handleReturn);
+
+    });
+
+        
     it('should not barf',function(done){
       Integration.getIntegrationBus(function(error,integrationBus){
             integrationBus.should.have.property('type','IntegrationBus');
@@ -12,8 +36,9 @@ describe('IntegrationBus', function(){
                 throw error;
             }
       });      
-    });    
+    });
 
+    
     it.skip('getFlowInstances',function(done){});  
 });
 

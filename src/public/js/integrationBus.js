@@ -10,7 +10,7 @@ Author John Hosie
   Contributors:
       John Hosie - initial implementation 
 */
-
+var jhcount=0;
 Integration = (function(){
   var MAX_SNAPSHOT_RECORDS=100;
   /**
@@ -139,16 +139,17 @@ Integration = (function(){
   function getIntegrationBus(callback){
       if(IntegrationBus.instance!=undefined) {
           callback(null,IntegrationBus.instance);        
-      };
-
-      $.getJSON('http://localhost:3002/apiv1/integrationbus?depth=8',function(result){
-          IntegrationBus.instance=  new IntegrationBus(result);    
-          callback(null,IntegrationBus.instance);
-          
-      }).fail(function(error){
-          onError("failed getting JSON for integration bus", error);
-          callback(error);
-      });
+      }else{
+        //first time
+        $.getJSON('http://localhost:3002/apiv1/integrationbus?depth=8',function(result){
+            IntegrationBus.instance=  new IntegrationBus(result);    
+            callback(null,IntegrationBus.instance);
+            
+        }).fail(function(error){
+            onError("failed getting JSON for integration bus", error);
+            callback(error);
+        });
+      }
       
   }
   
@@ -281,6 +282,7 @@ Integration = (function(){
         return;        
       }
       this.name = other.name;
+      this.id=++jhcount;
       this.host = other.host;
       this.mqtt = other.mqtt;
       this.pubSub = new PubSub( this.name,this.host,this.mqtt);
