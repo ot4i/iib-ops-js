@@ -515,7 +515,7 @@ Integration = (function(){
                       }
                     });
       
-    },50);    
+    },5000);    
   };
   MessageFlowSimulation.prototype = new MessageFlow();
   
