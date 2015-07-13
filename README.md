@@ -1,6 +1,6 @@
 #iib-ops-js
 
-A java script module that encapsulated the IBM Integration Bus administration and operational monitoring HTTP and MQTT interfaces. With this module, you can access those capabilities via java script objects, functions and callbacks.
+A java script module that encapsulates the IBM Integration Bus administration and operational monitoring HTTP and MQTT interfaces. With this module, you can access those capabilities via java script objects, functions and callbacks.
 
 This works with iib-ops-rest.
 
