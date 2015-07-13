@@ -1,4 +1,15 @@
-
+/*
+Copyright 2014-2015 IBM Corporation 
+Author John Hosie 
+ 
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the MIT License
+  which accompanies this distribution, and is available at
+  http://opensource.org/licenses/MIT
+ 
+  Contributors:
+      John Hosie - initial implementation 
+*/
 
     var integrationBus = JSON.stringify({
       type: "IntegrationBus",
