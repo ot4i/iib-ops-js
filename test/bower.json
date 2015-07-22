@@ -1,0 +1,21 @@
+{
+  "name": "iib-ops-js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ot4i/iib-ops-js",
+  "authors": [
+    "hosie <jhosie@uk.ibm.com>"
+  ],
+  "description": "A java script module that encapsulates the IBM Integration Bus administration and operational monitoring HTTP and MQTT interfaces.",
+  "main": "integrationBus.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bower-mqttws": "~1.0.0"
+  }
+}
