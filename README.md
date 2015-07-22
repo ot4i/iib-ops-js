@@ -17,7 +17,7 @@ The initial prototype for this repository started life as a subset of a fork of 
 2. Start the server ``` http-server -p 8080 -c-1 -o ```
 
 ### Run the unit test
-Point your browser at http://localhost:8080/unittest.html
+Point your browser at [http://localhost:8080/unittest.html](http://localhost:8080/unittest.html)
 
 ### What next
 Get on with coding your javascript client.  Look in the test file ```test/tests.js``` to understand the interfaces.
