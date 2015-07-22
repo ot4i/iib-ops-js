@@ -9,7 +9,7 @@ The initial prototype for this repository started life as a subset of a fork of 
 ## Try it
 ### Install
 1. Download and install node.js - http://nodejs.org/download/
-2. Install http static server for node ```npm instal -g http-server```
+2. Install http static server for node ```npm install -g http-server```
 3. Download - [iib-ops-js] (https://github.com/ot4i/iib-ops-js/archive/master.zip)  and unzip
 
 ### Start the server
